@@ -4,14 +4,14 @@
 // f(4) = (4 - 1) + (4 - 2) = 5
 // f(5) = (5 - 1) + (5 - 2) = 7
 // f(n) = (n - 1) + (n - 2)
-int Fibonacci(int n)
+double Fibonacci(int n)
 {
-    if (n == 1 || n ==2) return 1;
-    else return Fibonacci(n - 1) + Fibonacci(n + 1);
+    if (n == 1 || n == 2) return 1;
+    else return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
 
-for(int i = 0; i < 5; i++)
+for(int i = 1; i < 40; i++)
 {
-Console.WriteLine(Fibonacci(i));
+Console.WriteLine($" f{i} = {Fibonacci(i)}");
 }
 
